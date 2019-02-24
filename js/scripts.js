@@ -37,8 +37,19 @@ $(document).ready(function(){
         }
       }
     }
-    $('#vaca').append(finalLoc);
-    $('#resultsdiv').show();
+
+    submitCheck = (function() {
+      console.log(userName);
+      if (userName === '') {
+        alert("It looks like you didn't enter your name. Please fill out and re-submit.")
+      } else {
+        $('#vaca').append(finalLoc);
+        $('#finalname').append(userName);
+        $('#resultsdiv').show();
+      }
+    });
+
+    submitCheck();
 
 
     event.preventDefault();
