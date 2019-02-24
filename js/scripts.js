@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  debugger;
+  // debugger;
   $('#resultsdiv').hide();
   $('.postsub').hide();
   $('#tryagain').hide();
@@ -28,7 +28,8 @@ $(document).ready(function(){
         } else if (geo === 'town') {
           var finalLoc = 'Reno, Nevada';
           $("#loc_img").attr("src","img/reno.jpg");
-        }
+          }
+      }
     } else if (weather === 'cold') {
       if (travel === 'yes') {
         if (geo === 'city') {
@@ -39,24 +40,26 @@ $(document).ready(function(){
           $("#loc_img").attr("src","img/gal.jpg");
         }
       } else if (travel === 'no') {
-        if (geo === 'city') {
-          var finalLoc = 'Minneapolis, Minnesota';
-          $("#loc_img").attr("src","img/min.jpg");
-        } else if (geo === 'town') {
-          var finalLoc = 'Boulder, Colorado';
-          $("#loc_img").attr("src","img/bou.jpg");
+          if (geo === 'city') {
+            var finalLoc = 'Minneapolis, Minnesota';
+            $("#loc_img").attr("src","img/min.jpg");
+          } else if (geo === 'town') {
+            var finalLoc = 'Boulder, Colorado';
+            $("#loc_img").attr("src","img/bou.jpg");
           }
         }
       }
-    }
+
+
+
 
 
 
     submitCheck = (function() {
       if (userName === '') {
-        alert("It looks like you didn't enter your name. Please fill out and re-submit.")
+        alert("It looks like you didn't enter your name. Please fill out and re-submit.");
       } else {
-        $('#img').hide();
+
         $('#vaca').append(finalLoc);
         $('#finalname').append(userName);
         $('#resultsdiv').show();
@@ -64,17 +67,19 @@ $(document).ready(function(){
         $('#vacation-form').hide();
         $('.postsub').show();
         $('#tryagain').show();
+        $('#imgdiv').show();
+        console.log($('#loc_img').attr('src'));
       }
     });
 
     submitCheck();
-    $('#imgdiv').show();
+
 
     event.preventDefault();
   });
 
   $('#tryagain').click(function(){
-
+    $('#imgdiv').hide();
     $('#vaca').empty();
     $('#finalname').empty();
     $('.postsub').hide();
