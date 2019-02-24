@@ -15,7 +15,7 @@
       <h1>Time for a break? Book a vacation today!</h1>
     </div>
     <div class="container">
-      <h3 class="postsub">When going on vacation, sometimes it's tough to decided on where you want to go. Well, you're in luck! Use our handy-dandy vacation decider to figure out where your next adventure lies!</h3>
+      <h3 class="presub">When going on vacation, sometimes it's tough to decided on where you want to go. Well, you're in luck! Use our handy-dandy vacation decider to figure out where your next adventure lies!</h3>
       <form class="form-group" id="vacation-form">
         <div id="userdiv">
           <label for="username">Please enter your name:</label>
@@ -26,7 +26,7 @@
             <p class="radiolabels">What type of weather do you enjoy?</p>
             <div class="radio radiodiv" id="weatherdiv">
               <label for="weather">
-                <input type="radio" name="weather" value="hot">
+                <input type="radio" name="weather" value="hot" checked>
                 Warmer climate
               </label>
               <label for="weather">
@@ -39,7 +39,7 @@
             <p class="radiolabels">Do you want travel far?</p>
             <div class="radio radiodiv" id="traveldiv">
               <label for="travel">
-                <input type="radio" name="travel" value="yes">
+                <input type="radio" name="travel" value="yes" checked>
                 I want to travel far away
               </label>
               <label for="travel">
@@ -52,7 +52,7 @@
             <p class="radiolabels">What type of environment do you prefer?</p>
             <div class="radio radiodiv" id="geographydiv">
               <label for="geo">
-                <input type="radio" name="geo" value="city">
+                <input type="radio" name="geo" value="city" checked>
                 Big city life
               </label>
               <label for="geo">
@@ -64,9 +64,10 @@
         </div>
         <button type="submit" id="resultsbtn">Click here for your vacation location!</button>
       </form>
-      <div id="resultsdiv">
-        <h3><span id="finalname"></span>, your personalized vacation location is: <span id='vaca'></span></h3>
+      <div class="postsub" id="resultsdiv">
+        <h3>Congratulations <span id="finalname"></span>, your personalized vacation location is: <span id='vaca'></span></h3>
       </div>
+      <button type="button" id="tryagain">Click here to try the survey again!</button>
     </div>
   </body>
 </html>

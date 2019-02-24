@@ -1,7 +1,11 @@
 $(document).ready(function(){
+  debugger;
   $('#resultsdiv').hide();
+  $('.postsub').hide();
+  $('#tryagain').hide();
 
   $('form#vacation-form').submit(function(){
+
     var weather = $('input:radio[name=weather]:checked').val();
     var travel = $('input:radio[name=travel]:checked').val();
     var geo = $('input:radio[name=geo]:checked').val();
@@ -38,14 +42,20 @@ $(document).ready(function(){
       }
     }
 
+
+
     submitCheck = (function() {
-      console.log(userName);
       if (userName === '') {
         alert("It looks like you didn't enter your name. Please fill out and re-submit.")
       } else {
+
         $('#vaca').append(finalLoc);
         $('#finalname').append(userName);
         $('#resultsdiv').show();
+        $('.presub').hide();
+        $('#vacation-form').hide();
+        $('.postsub').show();
+        $('#tryagain').show();
       }
     });
 
@@ -55,5 +65,16 @@ $(document).ready(function(){
     event.preventDefault();
   });
 
+  $('#tryagain').click(function(){
+
+    $('#vaca').empty();
+    $('#finalname').empty();
+    $('.postsub').hide();
+    $(".presub").show();
+    $('#tryagain').hide();
+    $('#vacation-form').show();
+
+    event.preventDefault();
+  });
 
 });
