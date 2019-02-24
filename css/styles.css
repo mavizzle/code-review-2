@@ -1,6 +1,25 @@
+body {
+  background-color: black;
+}
 
+.postsub {
+  text-align: center;
+}
 
+.radiolabels {
+  text-align: center;
+}
+
+.radiodiv label {
+  display: block;
+}
 
 #banner {
   text-align: center;
+}
+
+#results {
+  display: block;
+  margin: auto;
+  margin-top: 100px;
 }

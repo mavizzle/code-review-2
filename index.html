@@ -12,34 +12,83 @@
       <h1>Time for a break? Book a vacation today!</h1>
     </div>
     <div class="container">
-      <h3>When going on vacation, sometimes it's tough to decided on where you want to go. Well, you're in luck! Use our handy-dandy vacation decider to figure out where your next adventure lies!</h3>
-      <form class="for-group" id="vacation-form">
+      <h3 class="postsub">When going on vacation, sometimes it's tough to decided on where you want to go. Well, you're in luck! Use our handy-dandy vacation decider to figure out where your next adventure lies!</h3>
+      <form class="form-group" id="vacation-form">
         <div id="userdiv">
           <label for="username">Please enter your name:</label>
           <input type="text" class="form-control"  id="username">
         </div>
         <div class="row">
           <div class="col-md-3">
-            <div class="form-group">
-
+            <p class="radiolabels">What type of weather do you enjoy most?</p>
+            <div class="radio radiodiv" id="weatherdiv">
+              <label for="weather">
+                <input type="radio" name="weather" value="hot">
+                Hot
+              </label>
+              <label for="weather">
+                <input type="radio" name="weather" value="cold">
+                Cold
+              </label>
+              <label for="weather">
+                <input type="radio" name="weather" value="temp">
+                Temperate
+              </label>
             </div>
           </div>
           <div class="col-md-3">
-            <div class="form-group">
-
+            <p class="radiolabels">How many people do would you like to be around?</p>
+            <div class="radio radiodiv" id="peoplediv">
+              <label for="people">
+                <input type="radio" name="people" value="few">
+                Tons!
+              </label>
+              <label for="people">
+                <input type="radio" name="people" value="some">
+                No one!
+              </label>
+              <label for="people">
+                <input type="radio" name="people" value="tons">
+                A decent amount
+              </label>
             </div>
           </div>
           <div class="col-md-3">
-            <div class="form-group">
-
+            <p class="radiolabels">What type of environment do prefer?</p>
+            <div class="radio radiodiv" id="geographydiv">
+              <label for="geo">
+                <input type="radio" name="geo" value="city">
+                Tons!
+              </label>
+              <label for="geo">
+                <input type="radio" name="geo" value="isolated">
+                No one!
+              </label>
+              <label for="geo">
+                <input type="radio" name="geo" value="town">
+                A decent amount
+              </label>
             </div>
           </div>
           <div class="col-md-3">
-            <div class="form-group">
-
+            <p class="radiolabels">How far would you like to travel?</p>
+            <div class="radio radiodiv" id="traveldiv">
+              <label for="travel">
+                <input type="radio" name="travel" value="close">
+                Not far at all
+              </label>
+              <label for="travel">
+                <input type="radio" name="travel" value="far">
+                Very far
+              </label>
+              <label for="travel">
+                <input type="radio" name="travel" value="medium">
+                A medium distance
+              </label>
             </div>
           </div>
         </div>
+        <button type="submit" id="results">Click for your vacation location!</button>
       </form>
     </div>
   </body>
