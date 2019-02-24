@@ -3,7 +3,10 @@
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <script src="js/jquery-3.3.1.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
     <title>Vacation Finder</title>
   </head>
@@ -58,15 +61,15 @@
             <div class="radio radiodiv" id="geographydiv">
               <label for="geo">
                 <input type="radio" name="geo" value="city">
-                Tons!
+                Big city
               </label>
               <label for="geo">
                 <input type="radio" name="geo" value="isolated">
-                No one!
+                Super rural
               </label>
               <label for="geo">
                 <input type="radio" name="geo" value="town">
-                A decent amount
+                Pleasant suburb
               </label>
             </div>
           </div>
@@ -88,8 +91,11 @@
             </div>
           </div>
         </div>
-        <button type="submit" id="results">Click for your vacation location!</button>
+        <button type="submit" id="resultsbtn">Click here for your vacation location!</button>
       </form>
+      <div class="resultsdiv">
+        <h3>Your personalized vacation location is: <span id="'vaca'"></span></h3>
+      </div>
     </div>
   </body>
 </html>
