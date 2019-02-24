@@ -16,27 +16,35 @@ $(document).ready(function(){
       if (travel === 'yes') {
         if (geo === 'city') {
           var finalLoc = 'Sao Paolo, Brazil';
+          $("#loc_img").attr("src","img/sao.jpg");
         } else if (geo === 'town') {
           var finalLoc = 'Tijuana, Mexico';
+          $("#loc_img").attr("src","img/tij.jpg");
         }
       } else if (travel === 'no') {
         if (geo === 'city') {
           var finalLoc = 'Los Angeles, California';
+          $("#loc_img").attr("src","img/la.jpg");
         } else if (geo === 'town') {
           var finalLoc = 'Reno, Nevada';
+          $("#loc_img").attr("src","img/reno.jpg");
         }
     } else if (weather === 'cold') {
       if (travel === 'yes') {
         if (geo === 'city') {
           var finalLoc = 'St. Petersburg, Russia';
+          $("#loc_img").attr("src","img/stp.jpg");
         } else if (geo === 'town') {
           var finalLoc = 'Galway, Ireland';
+          $("#loc_img").attr("src","img/gal.jpg");
         }
       } else if (travel === 'no') {
         if (geo === 'city') {
           var finalLoc = 'Minneapolis, Minnesota';
+          $("#loc_img").attr("src","img/min.jpg");
         } else if (geo === 'town') {
           var finalLoc = 'Boulder, Colorado';
+          $("#loc_img").attr("src","img/bou.jpg");
           }
         }
       }
@@ -48,7 +56,7 @@ $(document).ready(function(){
       if (userName === '') {
         alert("It looks like you didn't enter your name. Please fill out and re-submit.")
       } else {
-
+        $('#img').hide();
         $('#vaca').append(finalLoc);
         $('#finalname').append(userName);
         $('#resultsdiv').show();
@@ -60,7 +68,7 @@ $(document).ready(function(){
     });
 
     submitCheck();
-
+    $('#imgdiv').show();
 
     event.preventDefault();
   });

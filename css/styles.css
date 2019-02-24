@@ -27,3 +27,11 @@ body {
 #resultsdiv {
   color: white;
 }
+
+#imgdiv {
+  display: none;
+}
+#imgdiv img {
+  height: 300px;
+  width: auto;
+}
