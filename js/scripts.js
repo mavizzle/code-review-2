@@ -4,13 +4,21 @@ $(document).ready(function(){
   $('.postsub').hide();
   $('#tryagain').hide();
 
+  String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+  }
+
   $('form#vacation-form').submit(function(){
 
     var weather = $('input:radio[name=weather]:checked').val();
     var travel = $('input:radio[name=travel]:checked').val();
     var geo = $('input:radio[name=geo]:checked').val();
 
+
+
     var userName = $('input#username').val();
+
+
 
     if (weather === 'hot') {
       if (travel === 'yes') {
@@ -61,7 +69,7 @@ $(document).ready(function(){
       } else {
 
         $('#vaca').append(finalLoc);
-        $('#finalname').append(userName);
+        $('#finalname').append(userName.capitalize());
         $('#resultsdiv').show();
         $('.presub').hide();
         $('#vacation-form').hide();
