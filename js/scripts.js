@@ -75,7 +75,7 @@ $(document).ready(function(){
         $('#vacation-form').hide();
         $('.postsub').show();
         $('#tryagain').show();
-        $('#imgdiv').show();
+        $('#imgdiv').fadeIn();
         console.log($('#loc_img').attr('src'));
       }
     });
