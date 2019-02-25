@@ -1,5 +1,9 @@
 body {
-  background-color: black;
+  background-color: #03032d;
+}
+
+.presub {
+  text-align: center;
 }
 
 .postsub {
@@ -14,14 +18,38 @@ body {
   display: block;
 }
 
-#banner {
-  text-align: center;
-}
-
 .resultsbtn {
+  background-color: #cbb32d;
   display: block;
   margin: auto;
   margin-top: 100px;
+  border-radius: 25px;
+}
+
+#bodycontainer {
+color: white;
+}
+#banner {
+  text-align: center;
+  background-color: #858585;
+}
+
+#userdiv {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  max-width: 500px;
+}
+
+#inputrow {
+  margin-top: 50px;
+}
+#extra_forms div {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 #resultsdiv {
@@ -30,6 +58,11 @@ body {
 
 #imgdiv {
   display: none;
+}
+
+#imgdiv {
+  margin-top: 50px;
+  text-align: center;
 }
 #imgdiv img {
   height: 300px;
